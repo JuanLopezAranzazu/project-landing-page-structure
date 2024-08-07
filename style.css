@@ -49,11 +49,6 @@ a {
   text-decoration: none;
 }
 
-.logo a {
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
 html,
 body {
   scroll-behavior: smooth;
@@ -80,6 +75,7 @@ header {
 
 .logo a {
   color: var(--header-text-color);
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
