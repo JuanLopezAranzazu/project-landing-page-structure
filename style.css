@@ -8,7 +8,9 @@
   --footer-text-color: #000000;
   --nav-menu-background: rgb(255, 255, 255, 0.9);
   --header-height: 60px;
+  --footer-height: 100px;
   --max-width: 1200px;
+  --min-width: 360px;
   --font-family: "Poppins", sans-serif;
 }
 
@@ -60,17 +62,21 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
+  background-color: var(--header-background);
+  color: var(--header-text-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.header-container {
+.header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
   height: var(--header-height);
-  background-color: var(--header-background);
-  color: var(--header-text-color);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .logo a {
@@ -132,27 +138,36 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1;
-  max-width: var(--max-width);
   margin-top: var(--header-height);
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
 }
 
 .section-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: auto;
   padding: 5rem 1rem;
 }
 
 footer {
   background-color: var(--footer-background);
   color: var(--footer-text-color);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.footer-container {
-  text-align: center;
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  height: var(--footer-height);
 }
 
 /* media queries */
@@ -165,7 +180,7 @@ footer {
     left: 0;
     background-color: var(--nav-menu-background);
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - var(--header-height));
     overflow-y: auto;
     flex-direction: column;
     justify-content: center;

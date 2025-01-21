@@ -1,4 +1,5 @@
 // elements
+
 const menuBtn = document.getElementById("menu-btn");
 const menuBtnIcon = menuBtn.querySelector("i");
 const navMenu = document.getElementById("nav-menu");
@@ -7,6 +8,7 @@ const toggleBtnIcon = toggleBtn.querySelector("i");
 const scrollTopBtn = document.getElementById("scroll-top-btn");
 
 // events
+
 // Event to toggle the nav menu
 menuBtn.addEventListener("click", () => {
   navMenu.classList.toggle("active");
